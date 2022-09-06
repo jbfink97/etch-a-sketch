@@ -9,8 +9,23 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <h1 id="gridSize">16</h1>
-    <div id="gridDiv"></div>
+    <h1>Etch-A-Sketch</h1>
+    <div class="settings">
+        <div>
+            <label>Grid Size (1-100)</label>
+            <input id="gridSize" type="number" min="1" max="100" value="16">
+            <button id="submit">Update</button>
+        </div>
+        <button id="clear">Clear Grid</button>
+        <div>
+            <label>Pen Color</label>
+            <input type="color" id="penColor" value="#ff1123">
+        </div>
+    </div>
+    <div id="outer">
+        <div id="container">
+        </div>
+    </div>
     
 </body>
 </html>

@@ -1,30 +1,31 @@
 window.addEventListener('load', () => {
 
-const gridSize = Number(document.querySelector('#gridSize').textContent);
-const gridDiv = document.querySelector('#gridDiv');
+    const gridContainer = document.querySelector('#container');
+    const changeBtn = document.getElementById('submit');
+    const gridSize = document.querySelector('#gridSize').value;
+    const clearBtn = document.querySelector('#clear');
+    const colorBtn = document.getElementById('penColor');
 
-for (let i = 0; i < gridSize; i++) {
-    let gridRow = document.createElement('div');
-    gridRow.classList.add('gridRow');
-    gridDiv.appendChild(gridRow);
-    for (let j = 0; j < gridSize; j++){
-        let gridSquare = document.createElement('div');
-        gridSquare.classList.add('gridSquare');
-        gridRow.appendChild(gridSquare);
+    // Function declarations
+    function draw() {
+        let pixels = document.querySelectorAll('.gridSquare');
+        let penColor = document.getElementById('penColor').value;
+        pixels.forEach(pixel => {
+            pixel.addEventListener('mouseover', () => {
+                pixel.style.backgroundColor = penColor;
+            })
+        })
     }
-}
 
-const gridNodeList = document.querySelectorAll('.gridSquare');
-
-gridNodeList.forEach(grid => {
-    grid.addEventListener('mouseover', () => {
-        grid.classList.add('hovered');
-    })
-
-})
-
-
-
+    function changeGridSize(gridSize) {
+        const currentGrid = document.querySelectorAll('.gridline');
+        currentGrid.forEach(grid => {
+            grid.remove();
+        })
+        for (let i = 0; i < gridSize; i++) {
+            const gridLine = document.createElement('div');
+        }
+    }
 
 
 })
