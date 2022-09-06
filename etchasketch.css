@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    background-color: peachpuff;
+}
+
+.gridSquare {
+    height: 10px;
+    width: 10px;
+    border: 1px solid black;
+}
+
+.hovered{
+    background-color: blueviolet;
+}
+
+
+#gridDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px 30px 30px;
+
+}
+
+h1{
+    padding: 25 25 25 25;
+    text-align: center;
+}
